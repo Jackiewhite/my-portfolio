@@ -1,10 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ArrowUpRight } from 'lucide-react';
 
 export default function Portfolio() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [visibleSections, setVisibleSections] = useState(new Set());
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,16 +21,6 @@ export default function Portfolio() {
       });
       if (current) setActiveSection(current);
 
-      sections.forEach(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const isVisible = rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.3;
-          if (isVisible) {
-            setVisibleSections(prev => new Set([...prev, section]));
-          }
-        }
-      });
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -40,6 +30,16 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "Twill",
+      year: "2026",
+      role: "Full-Stack Developer & Designer",
+      description: "A curated job board connecting technical talent with fashion's most innovative companies. Built for engineers, designers, and data people who want to work at the intersection of style and software.",
+      tags: ["Next.js", "Supabase", "TypeScript"],
+      image: `${process.env.PUBLIC_URL}/twill-screenshot.png`,
+      imageClass: "object-top",
+      link: "https://twillcareers.com"
+    },
+    {
       title: "Morning Field Cafe",
       year: "2024",
       role: "Full-Stack Developer & Designer",
@@ -47,7 +47,7 @@ export default function Portfolio() {
       tags: ["React", "JavaScript", "UI/UX"],
       image: "/images/hero-image.jpg",
       link: "https://morning-field-cafe-j5dgjaglc-jackies-projects-ede21082.vercel.app/#visit"
-    }
+    },
   ];
 
   const scrollToSection = (id) => {
@@ -179,11 +179,11 @@ export default function Portfolio() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${project.imageClass || ''}`}
                     />
                   </div>
                 </div>
-                
+
                 <FadeIn delay={0}>
                   <div className="grid md:grid-cols-12 gap-8">
                     <div className="md:col-span-7">
@@ -194,7 +194,7 @@ export default function Portfolio() {
                         {project.description}
                       </p>
                     </div>
-                    
+
                     <div className="md:col-span-5 space-y-6">
                       <div>
                         <p className="text-xs tracking-widest text-gray-400 mb-2 font-light">ROLE</p>
