@@ -232,16 +232,13 @@ export default function Portfolio() {
             
             <div className="md:col-span-7 space-y-8">
               <p className="text-xl md:text-2xl font-light leading-relaxed text-gray-800">
-                I am passionate about creating innovative solutions to complex problems, as well as designing captivating user experiences.
+                I'm a software engineer with 4 years of enterprise experience at General Motors, where I built and maintained applications serving 20,000+ global suppliers across the automotive supply chain. My work spanned full stack development, test automation, and internal tooling — from Java and Spring Boot on the backend to Angular and TypeScript on the frontend.
               </p>
               <p className="text-lg font-light leading-relaxed text-gray-600">
-                My expertise spans across multiple programming languages and technologies, including Python, Java, JavaScript, CSS, and HTML. I have experience in both front-end and back-end development. Throughout my career, I have worked on a wide range of projects, from small-scale applications to enterprise-level systems.
+                Most recently I founded Twill, a fashion-tech job board I built solo from the ground up using Next.js, React, TypeScript, and Supabase — and deployed on Vercel. I integrated the Vercel AI SDK to add AI-powered job matching and summarization features that are live today.
               </p>
               <p className="text-lg font-light leading-relaxed text-gray-600">
-                I pride myself on my ability to deliver high-quality code that meets both functional and non-functional requirements. I am also skilled in agile development methodologies, and have experience working in cross-functional teams.
-              </p>
-              <p className="text-lg font-light leading-relaxed text-gray-600">
-                In addition to my technical skills, I am a strong communicator and enjoy working closely with others to understand their needs and deliver solutions that exceed their expectations. I am a quick learner and am always eager to learn new technologies and tools that can help improve my work.
+                I'm at my best when I'm solving real problems for real users, whether that's reducing 30-minute supplier workflows to instant lookups, cutting regression testing from 6 hours to 90 minutes, or shipping a product from zero to production on my own.
               </p>
 
               <div className="pt-8 space-y-6">
@@ -249,13 +246,15 @@ export default function Portfolio() {
                   <p className="text-xs tracking-widest text-gray-400 mb-3 font-light">EXPERTISE</p>
                   <div className="grid grid-cols-2 gap-4 text-sm font-light">
                     <div>
-                      <p>Python & Java</p>
+                      <p>Java & Spring Boot</p>
                       <p>JavaScript & TypeScript</p>
-                      <p>HTML & CSS</p>
+                      <p>React & Next.js</p>
+                      <p>SQL & PostgreSQL</p>
                     </div>
                     <div>
-                      <p>Front-end Development</p>
-                      <p>Back-end Development</p>
+                      <p>Test Automation</p>
+                      <p>AI/LLM Integration</p>
+                      <p>Full Stack Development</p>
                       <p>Agile Methodologies</p>
                     </div>
                   </div>
